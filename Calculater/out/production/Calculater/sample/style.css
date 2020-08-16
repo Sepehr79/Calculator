@@ -1,0 +1,10 @@
+Button{
+    -fx-pref-width: 50;
+    -fx-pref-height: 30;
+}
+.Calculator{
+    -fx-background-color: antiquewhite;
+}
+#display{
+
+}
