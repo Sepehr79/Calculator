@@ -100,22 +100,23 @@ public class Controller {
 
         calculate();
 
-        if (actionEvent.getSource() == plus){
+        if (actionEvent.getSource() == plus) {
             prPls = true;
             number = "";
         }
-        if (actionEvent.getSource() == minus){
+        if (actionEvent.getSource() == minus) {
             prMin = true;
             number = "";
         }
-        if (actionEvent.getSource() == multiplication){
+        if (actionEvent.getSource() == multiplication) {
             prMul = true;
             number = "";
         }
-        if (actionEvent.getSource() == division){
+        if (actionEvent.getSource() == division) {
             prDiv = true;
             number = "";
         }
+
         bufferNumber = display.getText();
     }
 
@@ -144,6 +145,7 @@ public class Controller {
 
         if (number.length() > 9)
             number = number.substring(0, 9);
-        display.setText(number);
+        if(number.length() > 1)
+            display.setText(number);
     }
 }

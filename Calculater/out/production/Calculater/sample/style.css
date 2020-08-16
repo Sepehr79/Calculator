@@ -1,10 +1,38 @@
+#Calculator{
+    -fx-max-width: 280;
+    -fx-max-height: 260;
+    -fx-background-color: black;
+    -fx-border-radius: 10;
+    -fx-border-width: 5;
+    -fx-border-color: gray;
+    -fx-border-insets: -3.5px;
+    -fx-border-style: solid;
+}
 Button{
     -fx-pref-width: 50;
     -fx-pref-height: 30;
+    -fx-background-color: #555555;
+    -fx-text-fill: white;
 }
-.Calculator{
-    -fx-background-color: antiquewhite;
+Button:focused{
+    -fx-border-width: 1;
+    -fx-border-color: deepskyblue;
+    -fx-border-radius: 3;
+    -fx-border-style: solid;
+}
+Button:hover{
+    -fx-border-color: deepskyblue;
+    -fx-border-radius: 3;
 }
 #display{
-
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-max-width: 280;
+    -fx-border-radius: 3;
+    -fx-border-color: #333333;
+    -fx-background-color: #112211;
+}
+#header{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
 }
