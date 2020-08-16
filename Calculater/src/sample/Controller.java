@@ -102,18 +102,21 @@ public class Controller {
 
         if (actionEvent.getSource() == plus){
             prPls = true;
+            number = "";
         }
         if (actionEvent.getSource() == minus){
             prMin = true;
+            number = "";
         }
         if (actionEvent.getSource() == multiplication){
             prMul = true;
+            number = "";
         }
         if (actionEvent.getSource() == division){
             prDiv = true;
+            number = "";
         }
         bufferNumber = display.getText();
-        number = "";
     }
 
     private void calculate(){
