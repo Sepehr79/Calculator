@@ -50,31 +50,37 @@ public class Controller {
         //numbers maximum can have 9 digits
         if (number.length() == 9) return;
 
-        if (actionEvent.getSource() == one){
-            number += "1";
-        }else if (actionEvent.getSource() == two){
-            number += "2";
-        }else if (actionEvent.getSource() == three){
-            number += "3";
-        }else if (actionEvent.getSource() == four){
-            number += "4";
-        }else if (actionEvent.getSource() == five){
-            number += "5";
-        }else if (actionEvent.getSource() == six){
-            number += "6";
-        }else if (actionEvent.getSource() == seven){
-            number += "7";
-        }else if (actionEvent.getSource() == eight){
-            number += "8";
-        }else if (actionEvent.getSource() == nine){
-            number += "9";
-        }else if (actionEvent.getSource() == zero){
-            number += "0";
-        }else if (actionEvent.getSource() == dot && dotFirstSelect && !display.getText().contains(".")){
-            number += ".";
-            dotFirstSelect = false;
+        if(!display.getText().equals("Infinity")) {
+            if (actionEvent.getSource() == one) {
+                number += "1";
+            } else if (actionEvent.getSource() == two) {
+                number += "2";
+            } else if (actionEvent.getSource() == three) {
+                number += "3";
+            } else if (actionEvent.getSource() == four) {
+                number += "4";
+            } else if (actionEvent.getSource() == five) {
+                number += "5";
+            } else if (actionEvent.getSource() == six) {
+                number += "6";
+            } else if (actionEvent.getSource() == seven) {
+                number += "7";
+            } else if (actionEvent.getSource() == eight) {
+                number += "8";
+            } else if (actionEvent.getSource() == nine) {
+                number += "9";
+            } else if (actionEvent.getSource() == zero) {
+                number += "0";
+            } else if (actionEvent.getSource() == dot && dotFirstSelect && !display.getText().contains(".")) {
+                number += ".";
+                dotFirstSelect = false;
+            }
+            display.setText(number);
         }
-        display.setText(number);
+        else {
+            number = "";
+            display.setText("0");
+        }
     }
 
     public void commandClick(ActionEvent actionEvent) {
@@ -83,14 +89,19 @@ public class Controller {
             display.setText("0");
             dotFirstSelect = true;
         }
-        if (actionEvent.getSource() == del){
-            if (number.length() > 1) {
-                number = number.substring(0, number.length() - 1);
-                display.setText(number);
-            }else {
-                number = "";
-                display.setText("0");
+        if(!display.getText().equals("Infinity")) {
+            if (actionEvent.getSource() == del) {
+                if (number.length() > 1) {
+                    number = number.substring(0, number.length() - 1);
+                    display.setText(number);
+                } else {
+                    number = "";
+                    display.setText("0");
+                }
             }
+        }else {
+            number = "0";
+            display.setText("0");
         }
     }
 

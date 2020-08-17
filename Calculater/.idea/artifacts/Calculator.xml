@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" name="JavaFXApp">
-    <output-path>$PROJECT_DIR$/out/artifacts/JavaFXApp</output-path>
+  <artifact type="javafx" name="Calculator">
+    <output-path>$PROJECT_DIR$/out/artifacts/Calculator</output-path>
     <properties id="javafx-properties">
       <options>
         <option name="appClass" value="sample.Main" />

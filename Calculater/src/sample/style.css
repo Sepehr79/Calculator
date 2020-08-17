@@ -24,6 +24,9 @@ Button:hover{
     -fx-border-color: deepskyblue;
     -fx-border-radius: 3;
 }
+#c{
+    -fx-background-color: darkorange;
+}
 #display{
     -fx-text-fill: white;
     -fx-font-size: 20;
