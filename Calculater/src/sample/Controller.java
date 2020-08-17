@@ -19,6 +19,8 @@ public class Controller {
     @FXML private Button zero;
     @FXML private Button dot;
 
+    private boolean dotFirstSelect = true;
+
     //Math signs
     @FXML private Button division;
     @FXML private Button multiplication;
@@ -68,8 +70,9 @@ public class Controller {
             number += "9";
         }else if (actionEvent.getSource() == zero){
             number += "0";
-        }else if (actionEvent.getSource() == dot){
+        }else if (actionEvent.getSource() == dot && dotFirstSelect && !display.getText().contains(".")){
             number += ".";
+            dotFirstSelect = false;
         }
         display.setText(number);
     }
@@ -78,6 +81,7 @@ public class Controller {
         if (actionEvent.getSource() == c){
             number = "";
             display.setText("0");
+            dotFirstSelect = true;
         }
         if (actionEvent.getSource() == del){
             if (number.length() > 1) {
@@ -91,6 +95,8 @@ public class Controller {
     }
 
     public void mathSignClick(ActionEvent actionEvent) {
+
+        dotFirstSelect = true;
 
         if (actionEvent.getSource() == radical){
             prRad = true;
