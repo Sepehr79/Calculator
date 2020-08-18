@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.awt.event.KeyEvent;
+
 public class Controller {
     //Numbers
     @FXML private Button one;

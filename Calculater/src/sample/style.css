@@ -29,6 +29,7 @@ Button:hover{
 }
 #display{
     -fx-text-fill: white;
+    -fx-alignment: baseline-right;
     -fx-font-size: 20;
     -fx-max-width: 280;
     -fx-border-radius: 3;
